@@ -40,14 +40,14 @@ def make_parser():
     parser.add_argument(
         "-f",
         "--exp_file",
-        default=r'D:\aaa--videodetection\YOLOV-master-daishuju\exps\NVID\NVID_s.py',
+        default='',
         type=str,
         help="plz input your expriment description file",
     )
     parser.add_argument(
         "--resume", default=False, action="store_true", help="resume training"
     )
-    parser.add_argument("-c", "--ckpt", default=r'D:\aaa--videodetection\YOLOV-master-daishuju\weights\yoloxs_vid.pth', type=str, help="checkpoint file")
+    parser.add_argument("-c", "--ckpt", default='', type=str, help="checkpoint file")
 
     parser.add_argument(
         "-e",
@@ -113,7 +113,7 @@ def main(exp, args):
     cudnn.benchmark = True
     lframe = int(args.lframe)
     gframe = int(args.gframe)
-    dataset_val = vid.VIDDataset(file_path=r'D:\aaa--videodetection\YOLOV-master-daishuju\file.npy',
+    dataset_val = vid.VIDDataset(file_path='',
                                  img_size=(args.tsize, args.tsize), preproc=Vid_Val_Transform(), lframe=lframe,
                                  gframe=gframe, val=True,dataset_pth=exp.data_dir)
     val_loader = vid.get_vid_loader(batch_size=lframe + gframe, data_num_workers=0, dataset=dataset_val, )

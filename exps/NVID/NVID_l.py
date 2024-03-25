@@ -17,9 +17,9 @@ class Exp(MyExp):
         # Define yourself dataset path
         self.pre_no_aug = 2
         self.num_classes = 3
-        self.data_dir = r"D:\aaa--videodetection\YOLOV-master-daishuju\dataset\ship"
-        self.train_ann = "half-train_cocoformat.json"
-        self.val_ann = "half-val_cocoformat.json"
+        self.data_dir = ""
+        self.train_ann = ""
+        self.val_ann = ""
         self.max_epoch = 7
         self.no_aug_epochs = 1
         self.warmup_epochs = 0
