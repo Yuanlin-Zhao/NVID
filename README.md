@@ -1,4 +1,4 @@
-* Installation
+# Installation
     git clone git@github.com:Yuanlin-Zhao/NVID.git
    cd NVID
 We select representative video frames for feature map visualization shown below.
